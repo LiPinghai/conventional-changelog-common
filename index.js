@@ -16,7 +16,7 @@ try {
 }
 
 var parserOpts = {
-  headerPattern: /^([^\(\)]*)(?:\((.*)\))? (.*)$/,
+  headerPattern: /^([^\(\)]*)(\((.*)\))? (.*)$/,
   headerCorrespondence: [
     'type',
     'scope',
@@ -50,17 +50,19 @@ var writerOpts = {
     if (commit.type === '新增' || commit.type === 'feat' ) {
       commit.type = '新增:';
     } else if (commit.type === '修复' || commit.type === 'fix') {
-      commit.type = '修复问题:';
+      commit.type = '修复:';
     } else if (commit.type === '优化' || commit.type === 'perf' || commit.type === 'docs'  || commit.type === 'style' || commit.type === 'test' || commit.type === 'chore') {
       commit.type = '优化:';
     } else if (commit.type === '更新' || commit.type === 'refactor') {
       commit.type = '更新:';
-    } else if (discard) {
-      return;
+    } else if (commit.type === '删除') {
+      commit.type = '删除:';
     } else if (commit.type === '回滚' || commit.type === 'revert') {
       commit.type = '回滚:';
     } else if (commit.type === '合并') {
       commit.type = '合并';
+    } else {
+      commit.type = '其他:';
     } 
 
     if (commit.scope === '*') {
@@ -97,7 +99,11 @@ var writerOpts = {
     return commit;
   },
   groupBy: 'type',
-  commitGroupsSort: 'title',
+  commitGroupsSort: (a)=>{
+    if(a.title === '其他:'){
+      return true
+    }
+  },
   commitsSort: ['scope', 'subject'],
   noteGroupsSort: 'title',
   notesSort: compareFunc

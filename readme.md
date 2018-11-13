@@ -1,11 +1,9 @@
 #  [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage Status][coveralls-image]][coveralls-url]
 
-> [conventional-changelog](https://github.com/ajoslin/conventional-changelog) [yygame](https://github.com/angular/angular) preset
+> [conventional-changelog](https://github.com/ajoslin/conventional-changelog) yygame preset
 
 
 See [convention](convention.md)
-
-**Issues with the convention itself should be reported on the angular issue tracker.**
 
 
 [npm-image]: https://badge.fury.io/js/conventional-changelog-angular.svg
