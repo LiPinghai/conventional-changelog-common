@@ -55,7 +55,7 @@ var writerOpts = {
       commit.type = '优化:';
     } else if (commit.type === '更新' || commit.type === 'refactor') {
       commit.type = '更新:';
-    } else if (commit.type === '删除') {
+    } else if (commit.type === '删除' || commit.type === 'del') {
       commit.type = '删除:';
     } else if (commit.type === '回滚' || commit.type === 'revert') {
       commit.type = '回滚:';

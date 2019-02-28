@@ -1,7 +1,7 @@
 {
-  "name": "conventional-changelog-yygame",
+  "name": "conventional-changelog-common",
   "version": "0.0.3",
-  "description": "conventional-changelog yygame preset",
+  "description": "conventional-changelog common preset",
   "main": "index.js",
   "scripts": {
     "coverage": "istanbul cover -x test.js _mocha -- -R spec --timeout 30000 && rm -rf ./coverage",
@@ -10,19 +10,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LiPinghai/conventional-changelog-yygame.git"
+    "url": "git+https://github.com/LiPinghai/conventional-changelog-common.git"
   },
   "keywords": [
     "conventional-changelog",
-    "yygame",
+    "common",
     "preset"
   ],
   "author": "LiPinghai",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/LiPinghai/conventional-changelog-yygame/issues"
+    "url": "https://github.com/LiPinghai/conventional-changelog-common/issues"
   },
-  "homepage": "https://github.com/LiPinghai/conventional-changelog-yygame#readme",
+  "homepage": "https://github.com/LiPinghai/conventional-changelog-common#readme",
   "devDependencies": {
     "better-than-before": "^1.0.0",
     "chai": "^3.4.1",
